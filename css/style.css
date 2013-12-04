@@ -1,0 +1,27 @@
+.header {
+	padding: 30px 20px;
+	margin: 0;
+}
+
+.header h1 {
+	font-size: 28px;
+}
+
+.content {
+	padding: 0 40px;
+	margin: 0;
+}
+
+.content h2 {
+	font-size: 20px;
+}
+
+ .footer {
+	padding: 30px 20px;
+	margin: 0;
+}
+
+.footer p {
+	font-size: 10px;
+	text-align: center;
+}

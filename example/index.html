@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>Handlebars demo</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" >
+  </head>
+  <body>
+    <div class="header">
+      <h1>Demo handlebars copile</h1>
+    </div>
+    <div id="content" class="content"></div>
+    <div class="footer">
+      <p>By Rodrigo Raya web developer</p>
+    </div>
+
+    <!-- Templates -->
+    <script type="text/x-handlebars-template" id="conten-template">
+      <h2>{{ title }}</h2>
+      <ul>
+        <li>
+          {{ message }}
+        </li>
+      </ul>
+    </script>
+
+    <script type="text/x-handlebars-template" id="conten-append-template">
+      <li>
+        {{ message }}
+      </li>
+    </script>
+
+    <!-- scripts -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../js/libs/handlebars.js"></script>
+    <script type="text/javascript" src="../js/jquery.handlebars.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        // Example 
+        $('#conten-template').handlebarsCompile({ container: '#content', content: { title: 'Examples', message: 'Basic.' } });
+
+        // Action example: appent, prepend or insert 
+        $('#conten-append-template').handlebarsCompile({ container: '#content ul', content: { message: 'Action type.' }, action: 'append' });
+      });
+    </script>
+  </body>
+</html>
